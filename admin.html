@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="medias/css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="medias/css/style-admin.css">
+    <link rel="stylesheet" href="medias/css/loader.css">
+</head>
+
+<body>
+    <div id="loading2">
+        <div class="loader"></div>
+    </div>
+    <div id="boxRef">
+        <nav>
+            <div id="loading">
+                <div class="loader"></div>
+            </div>
+            <h3>List of current orders</h3>
+            <form action="" method="post">
+                <select name="reference" id="reference">
+
+                </select>
+                <input type="submit" id="gerer" value="Manage this order">
+            </form>
+        </nav>
+        <div id="open">
+            <i class="fa-solid fa-angles-left"></i>
+        </div>
+    </div>
+
+    <div id="box">
+        <h1>Order reference <span></span></h1>
+        <p>Passed on <span></span></p>
+        <article>
+            <section>
+                <input type="checkbox" name="c1" id="c1">
+                <label for="c1"></label>
+                <span id="spanC1">Supported this command</span>
+            </section>
+            <h3>Packing</h3>
+            <section>
+                <input type="checkbox" name="c2" id="c2" disabled>
+                <label for="c2"></label>
+                <span id="spanC2">Package this order</span>
+            </section>
+            <section>
+                <span>Enter the parcel number:</span>
+                <input type="text" name="num" id="num" disabled>
+            </section>
+            <section>
+                <input type="checkbox" name="c3" id="c3" disabled>
+                <label for="c3"></label>
+                <span id="spanC3">Send the package</span>
+            </section>
+        </article>
+    </div>
+
+    <div id="box2">
+        <h1>No order to display </h1>
+        <p>To view an order, <br>
+            choose a reference into the menu.
+        </p>
+    </div>
+
+    <script src="medias/js/script-admin.js"></script>
+    <script src="medias/js/script-afficher-ref.js"></script>
+    <script src="medias/js/script-afficher-cde.js"></script>
+    <script src="medias/js/script-num-colis.js"></script>
+
+</body>
+
+</html>
