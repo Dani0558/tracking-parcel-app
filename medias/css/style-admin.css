@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+body{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+
+    background-image: linear-gradient(45deg, #E9967A, #0000FF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/****************** BOX ********************/
+#box {
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #777;
+    display: none;
+}
+#box.active {
+    display: block;
+}
+#box h1, #box2 h1 {
+    background-color: #0b11fe;
+    color: #cecff9;
+    text-align: center;
+    font-size: 19px;
+    margin: 0;
+    padding: 19px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+#box p, #box2 p {
+    text-align: center;
+    font-size: 14ox;
+    color: #888;
+    font-style: italic;
+}
+#box h3 {
+    text-align: center;
+    font-size: 18px;
+    text-decoration: underline;
+    border-top: 1px dashed #777;
+    padding-top: 12px;
+}
+/****************** BOX ********************/
+/**************************************/
+
+/****************** BOX2 ********************/
+#box2 {
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #777;
+    display: block;
+}
+#box2.active {
+    display: none;
+}
+
+/****************** BOX2 ********************/
+/**************************************/
+
+/****************** ARTICLE ********************/
+#box article {
+    padding: 25px;
+}
+/****************** ARTICLE ********************/
+/**************************************/
+
+/****************** SECTION ********************/
+#box section {
+    width: 300px;
+    margin: auto;
+    padding: 35px 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#box section span {
+    font-size: 12px;
+    margin-left: 20px;
+}
+#box input[type="text"] {
+    width: 70px;
+    padding: 12px;
+    margin-left: 10px;
+    outline: none;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+#box input[type="text"]:disabled {
+    cursor: not-allowed;
+}
+/****************** SECTION ********************/
+/**************************************/
+
+/****************** SWITCH ********************/
+#box input[type = "checkbox"] {
+    display: none;
+}
+/*#box input[type="checkbox"]:checked ~ label {
+    background-color: #f39c12;
+}*/
+#box input[type="checkbox"]:checked ~ label::after {
+    content: "";
+    background-color: #d35400;
+    left: 35px;
+    transition: 0.5s;
+}
+#box label {
+    display: block;
+    width: 70px;
+    height: 9px;
+    background-color: #f39c12;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+#box label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 3px #bbb;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+/****************** SWITCH ********************/
+/**************************************/
+
+/****************** BOXREF ********************/
+#boxRef {
+    z-index: 30;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#boxRef nav {
+    position: absolute;
+    left: -350px;
+    width: 350px;
+    height: 100vh;
+    background-color: #2c3e50;
+    transition: 0.5s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#boxRef nav.active {
+   left: 0; 
+}
+#boxRef h3 {
+    color: #ccc;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+#reference {
+    display: block;
+    margin: auto;
+    padding: 7px 12px;
+    margin-bottom: 30px;
+    outline: none;
+    color: #333;
+    font-size: 17px;
+    background-color: #ddd;
+}
+input[type="submit"] {
+    padding: 8px 15px;
+    outline: none;
+    color: #eee;
+    background-color: #FF6347;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.5s;
+}
+input[type="submit"]:hover {
+    background-color: orange;
+    color: #000;
+}
+
+#open {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+    transition: 0.5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#open.active {
+    left: 380px;
+}
+#open.active i {
+    transform: rotate(-90deg);
+    transition: 0.5s;
+}
+#open i {
+    color: #eee;
+    font-size: 22px;
+}
+#open:hover i {
+    color: coral;
+}
+/****************** BOXREF ********************/
+/**************************************/
