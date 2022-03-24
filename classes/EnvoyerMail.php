@@ -73,4 +73,3 @@ class EnvoyerMail extends Commande {
         $header       .= "Content-Type:text/html; charset='utf-8'";
         mail($destinataire, $sujet, $contenu, $header);
     }
-}
